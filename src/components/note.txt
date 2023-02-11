@@ -1,0 +1,82 @@
+api call in js
+----------------------
+
+
+AJAX
+-Xmlhttp
+-fetch
+-asynch & await
+ we use useEffect insted of ngOnInit
+
+
+ redirection in react
+ -----------------------
+npm i react-router-dom
+
+import {
+     BrowserRouter as Router - all routing need components
+     ,Routes                 - to set path for each component
+     ,Route                  - morethan one path
+     } from 'react-router-dom';
+
+
+useParams - hook used to access params from component url
+
+
+REDUX
+---------
+coupling  - many cnctions between parent and child component
+
+props drilling   - in co if any intermediate componenthave eny errors all other
+                   chids will not work
+
+to avoid props drilling we need to reduce coupling and make all the components independent
+
+for this react introduces a new thechnology  - state management technology  - REDUX
+
+
+redux proces
+-------------
+create a new js file to keep the states, all the components can access the js file
+
+-the components can access the datas from the js file but can't update datas in js file
+
+-Action   -> a file with all logics to update the state
+-Dispatch -> method used to Dispatch the logic in action file when the component need updation
+-Reducer  -> update the datas in js file according to the payload responce get from action file
+
+libraries to apply redux
+--------------------------
+1.REDUX
+2.REACT-REDUX
+3.REDUX-THUNK
+
+for instalation - npm i redux react-redux redux-thunk
+
+
+createStore() - a method used to create store in js file 
+                 -2  args
+                 -1- reducer   
+                 -2- middleware  (used to make synchronous redux into asynchonous)
+
+applyMiddleware()  - method in REDUX to apply middleware.
+
+combineReducers()  - method in REDUX used to combine all the redcuers in js file
+
+
+thunk  - used to create middleware 
+
+
+1.create store
+2.apply the store in index.js      
+   provider is an tag used to pass the store (react-redux)
+
+   AXIOS  - module used to make http methods(api call)
+             npm i axios 
+
+
+useDispatch - hook used to dispatch actions in components - react-redux
+
+
+
+to access datas from store to components - useSelector -hook
